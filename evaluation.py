@@ -14,8 +14,8 @@ def write_references_to_file(references, reference_file):
 
 
 
-def write_translatons_to_file(reference_file, prediction_file, translator_func):
-    with open(reference_file, "r") as f:
+def write_translatons_to_file(input_file, prediction_file, translator_func):
+    with open(input_file, "r") as f:
         open(prediction_file, 'w').close()
         with open(prediction_file, "a") as g:
             for line in tqdm(f.readlines()):
